@@ -14,28 +14,30 @@
  */
 public class BottomUpFibonacci {
 
-	static int fib(int n) {
-		assert n >= 0;
+    static int fib(int n) {
+        assert n >= 0;
 
-		int fibOne = 0;
-		int fibTwo = 1;
+        int fibOne = 0;
+        int fibTwo = 1;
 
-		if (n == 0)
-			return fibOne;
-		if (n == 1)
-			return fibTwo;
+        if (n == 0)
+            return fibOne;
+        if (n == 1)
+            return fibTwo;
 
-		int result = 0;
-		for (int i = 2; i <= n; i++) {
-			result = fibOne + fibTwo;
-			fibOne = fibTwo;
-			fibTwo = result;
-		}
-		return result;
-	}
+        int result = 0;
+        for (int i = 2; i <= n; i++) {
+            result = fibOne + fibTwo;
+            fibOne = fibTwo;
+            fibTwo = result;
+        }
+        return result;
+    }
 
-	public static void main(String[] args) {
-		int n = Integer.parseInt(args[0]);
-		System.out.println(fib(n));
-	}
+    public static void main(String[] args) {
+        int n = Integer.parseInt(args[0]);
+        if (n < 0)
+            throw new UnsupportedOperationException("Operation of negative number is not supported.");
+        System.out.println(fib(n));
+    }
 }

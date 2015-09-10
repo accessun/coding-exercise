@@ -1,4 +1,4 @@
-/** 
+/**
  * Problem: 3
  * Page: 38
  * Date:
@@ -16,7 +16,7 @@ public class SearchInAscendingMatrix {
 
         int column = maxColumn;
         int row = 0;
-        
+
         while (column >= 0 && row <= maxRow) {
             if (a[row][column] > num)
                 column--;
@@ -27,9 +27,9 @@ public class SearchInAscendingMatrix {
         }
         return false;
     }
-    
+
     public static void main(String[] args) {
-        int[][] a = {{1,2,8,9},{2,4,9,12},{4,7,10,13},{6,8,11,15}};
+        int[][] a = { { 1, 2, 8, 9 }, { 2, 4, 9, 12 }, { 4, 7, 10, 13 }, { 6, 8, 11, 15 } };
         System.out.println(searchNumberInMatrix(a, 7));
         System.out.println(searchNumberInMatrix(a, 5));
     }

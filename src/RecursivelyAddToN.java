@@ -8,15 +8,15 @@
  */
 public class RecursivelyAddToN {
 
-	public static int addToN(int n) {
-		if (n == 0) return 0;
-		return n + addToN(n-1);
-	}
+    public static int addToN(int n) {
+        if (n == 0) return 0;
+        return n + addToN(n-1);
+    }
 
-	public static void main(String[] args) {
-		int n = Integer.parseInt(args[0]);
-		assert n >= 1;
-		System.out.println(addToN(n));
-	}
+    public static void main(String[] args) {
+        int n = Integer.parseInt(args[0]);
+        assert n >= 1;
+        System.out.println(addToN(n));
+    }
 }
 
