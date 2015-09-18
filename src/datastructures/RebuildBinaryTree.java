@@ -1,10 +1,13 @@
+package datastructures;
+
 import java.util.NoSuchElementException;
 /**
  * Problem: 6
  * Page: 55
  * Date: 2015-08-25 
  * 
- * Rebuild a binary tree from the result of preorder and inorder traversal.
+ * Rebuild a binary tree from the result of preorder and inorder traversal. The
+ * tree node representation is implemented in the class <tt>BinaryTreeNode</tt>.
  * 
  * @author Xin Sun
  */
@@ -16,6 +19,16 @@ public class RebuildBinaryTree {
     private int rootPreorder; // (sub)root index in preorder array
     private BinaryTreeNode root; // root node
 
+    /**
+     * The constructor of RebuildBinaryTree class. Two non-null arrays of
+     * integers should be provided to rebuild the binary tree structure. Note
+     * that the binary tree will not be automatically rebuild by the
+     * constructor. You must invoke the <tt>rebuild()</tt> method on a
+     * RebuildBinaryTree object.
+     *
+     * @param int[] preorder
+     * @param int[] inorder
+     */
     public RebuildBinaryTree(int[] preorder, int[] inorder) {
         this.preorder = preorder;
         this.inorder = inorder;
@@ -24,18 +37,9 @@ public class RebuildBinaryTree {
         root = new BinaryTreeNode(preorder[0]);
     }
 
-    private class BinaryTreeNode {
-        int value;
-        BinaryTreeNode left;
-        BinaryTreeNode right; 
-
-        public BinaryTreeNode(int value) {
-            this.value = value;
-            left = null;
-            right = null;
-        }
-    }
-
+    /**
+     * The method used to rebuild the binary tree structure.
+     */
     public void rebuild() {
         int rootInorder = 0;
         // find the root index (rootInorder) in inorder array
@@ -48,7 +52,7 @@ public class RebuildBinaryTree {
         root.right = rebuild(rootInorder+1, len-1);
     }
 
-    // Check code from here to end
+    // Check code from here to end <-- Done
     private BinaryTreeNode rebuild(int startInorder, int endInorder) {
         if (startInorder > endInorder) return null; // do not forget base case
 
@@ -64,28 +68,21 @@ public class RebuildBinaryTree {
 
         return subRoot;
     }
-
-    private void printTree() {
-        printTree(root);
+    
+    /**
+     * Print out the binary tree. This method invokes the
+     * <tt>printTree(BinaryTreeNode node)</tt> in the class
+     * <tt>BinaryTreeNode</tt>.
+     */
+    public void printTree() {
+        BinaryTreeNode.printTree(root);
     }
-
-    private void printTree(BinaryTreeNode node) {
-        if (node == null) return;
-
-        if (node.left != null)
-            System.out.print(node.left.value);
-        else
-            System.out.print("null");
-
-        System.out.print(" <-- " + node.value + " --> ");
-
-        if (node.right != null)
-            System.out.println(node.right.value);
-        else
-            System.out.println("null");
-
-        printTree(node.left);
-        printTree(node.right);
+    
+    /**
+     * Return the root of the binary tree.
+     */
+    public BinaryTreeNode getRoot() {
+        return root;
     }
 
     public static void main(String[] args) {
@@ -97,4 +94,3 @@ public class RebuildBinaryTree {
         bt.printTree();
     }
 }
-
