@@ -1,3 +1,5 @@
+package exercises;
+
 /**
  * Add 1 to a given integer N (N >= 1) recursively.
  * Example:

@@ -1,3 +1,5 @@
+package exercises;
+
 /**
  * Problem: 4
  * Page: 44
@@ -42,9 +44,3 @@ public class ReplaceSpace {
         System.out.println(new ReplaceSpace(str4).replaceSpace());
     }
 }
-
-        
-
-
-        
-        

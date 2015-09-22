@@ -1,3 +1,5 @@
+package exercises;
+
 /**
  * Problem: 3
  * Page: 38
