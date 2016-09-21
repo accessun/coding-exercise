@@ -14,7 +14,6 @@ import datastructures.RebuildBinaryTree;
  */
 public class BinaryTreeMaxBreadth {
     private int level;
-    private int depth;
     private BinaryTreeNode root;
     private int[] count;
 

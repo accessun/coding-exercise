@@ -1,7 +1,5 @@
 package datastructures;
 
-import java.io.Serializable;
-
 /**
  * This class is an implementation of tree node of a typical binary tree data
  * structure. There are three instance fields in this class, all of which are
@@ -12,7 +10,7 @@ import java.io.Serializable;
  *
  * @author Xin Sun
  */
-public class BinaryTreeNode implements Serializable {
+public class BinaryTreeNode {
     public int value;
     public BinaryTreeNode left;
     public BinaryTreeNode right;

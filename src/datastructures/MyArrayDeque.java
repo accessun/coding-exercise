@@ -9,6 +9,7 @@ public class MyArrayDeque<Item> implements Iterable<Item> {
     private int NFIRST;
     private int NLAST;
     
+    @SuppressWarnings("unchecked")
     public MyArrayDeque() {
         a = (Item[]) new Object[2];
     }
@@ -51,6 +52,7 @@ public class MyArrayDeque<Item> implements Iterable<Item> {
     }
     
     private void resize(int capacity) {
+        @SuppressWarnings("unchecked")
         Item[] copy = (Item[]) new Object[capacity];
         if (capacity > a.length) {
             int j = 0;
