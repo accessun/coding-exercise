@@ -1,16 +1,21 @@
-package exercises;
+package io.github.accessun.algorithm;
 
 import java.util.Random;
 
-public class InsertionSort {
+public class BubbleSort {
 
     public static void sort(int[] a) {
         if (a == null || a.length == 1)
             return;
 
-        for (int i = 1; i < a.length; ++i) {
-            for (int j = i; j > 0 && a[j - 1] > a[j]; j--) {
-                exch(a, j - 1, j);
+        boolean hasExch = true;
+        while (hasExch) {
+            hasExch = false;
+            for (int i = 0; i < a.length - 1; i++) {
+                if (a[i + 1] < a[i]) {
+                    exch(a, i, i + 1);
+                    hasExch = true;
+                }
             }
         }
     }

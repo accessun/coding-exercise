@@ -1,4 +1,4 @@
-package datastructures;
+package io.github.accessun.datastructure;
 
 import java.util.NoSuchElementException;
 /**

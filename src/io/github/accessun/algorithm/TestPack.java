@@ -1,6 +1,6 @@
-package exercises;
+package io.github.accessun.algorithm;
 
-import datastructures.RebuildBinaryTree;
+import io.github.accessun.datastructure.RebuildBinaryTree;
 
 public class TestPack {
     public static void main(String[] args) {

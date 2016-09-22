@@ -1,4 +1,4 @@
-package exercises;
+package io.github.accessun.algorithm;
 
 /**
  * This class contains a method that use tail recursion to calculate the

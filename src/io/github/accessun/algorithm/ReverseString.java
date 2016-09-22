@@ -1,4 +1,4 @@
-package exercises;
+package io.github.accessun.algorithm;
 
 /**
  * This class contains a method that is used to reverse the order of a String.

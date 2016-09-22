@@ -1,7 +1,7 @@
-package exercises;
+package io.github.accessun.algorithm;
 
-import datastructures.BinaryTreeNode;
-import datastructures.RebuildBinaryTree;
+import io.github.accessun.datastructure.BinaryTreeNode;
+import io.github.accessun.datastructure.RebuildBinaryTree;
 
 /**
  * This class provides a static method to get the maximum depth of a binary tree.

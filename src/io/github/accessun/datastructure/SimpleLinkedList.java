@@ -1,4 +1,4 @@
-package datastructures;
+package io.github.accessun.datastructure;
 
 /**
  * This class is an implementation of simple unidirectional linked list.

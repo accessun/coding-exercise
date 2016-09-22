@@ -1,4 +1,4 @@
-package exercises;
+package io.github.accessun.algorithm;
 
 /**
  * Problem: 9

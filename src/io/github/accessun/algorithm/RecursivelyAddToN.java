@@ -1,4 +1,4 @@
-package exercises;
+package io.github.accessun.algorithm;
 
 /**
  * Add 1 to a given integer N (N >= 1) recursively.

@@ -1,23 +1,20 @@
-package exercises;
+package io.github.accessun.algorithm;
 
 import java.util.Random;
 
-public class BubbleSort {
+public class SelectionSort {
 
     public static void sort(int[] a) {
         if (a == null || a.length == 1)
             return;
 
-        boolean hasExch = true;
-        while (hasExch) {
-            hasExch = false;
-            for (int i = 0; i < a.length - 1; i++) {
-                if (a[i + 1] < a[i]) {
-                    exch(a, i, i + 1);
-                    hasExch = true;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[j] < a[i]) {
+                    exch(a, i, j);
                 }
             }
-        }
+        }        
     }
 
     private static void exch(int[] a, int i, int j) {
