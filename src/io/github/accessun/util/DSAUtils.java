@@ -2,6 +2,7 @@ package io.github.accessun.util;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 /**
  * This class provides some of the static utility methods needed by other
@@ -68,4 +69,68 @@ public class DSAUtils {
             exch(arr, i, randInt);
         }
     }
+
+    /**
+     * Generates a random integer no smaller than <code>min</code> and no larger
+     * than <code>max</code>.
+     * 
+     * @param min
+     *            lower bound (inclusive)
+     * @param max
+     *            higher bound (inclusive)
+     * @return
+     */
+    public static int randomInt(int min, int max) {
+        return ThreadLocalRandom.current().nextInt(min, max + 1);
+    }
+
+    /**
+     * Generates an integer array of length <code>len</code>. The elements are
+     * no smaller than <code>min</code> and no larger than <code>max</code>. If
+     * <code>len</code> is smaller than 1, an empty int array will be returned.
+     * 
+     * @param len
+     *            length of the generated array
+     * @param min
+     *            lower bound of the elements (inclusive)
+     * @param max
+     *            higher bound of the elements (inclusive)
+     * @return
+     */
+    public static int[] randomIntArr(int len, int min, int max) {
+        if (len <= 0) {
+            return new int[] {};
+        }
+
+        int[] result = new int[len];
+
+        for (int i = 0; i < len; i++) {
+            result[i] = randomInt(min, max);
+        }
+
+        return result;
+    }
+
+    /**
+     * Generates an integer array of random length. The possible length values
+     * are randomly distributed between 1 and <code>maxLength</code>. The
+     * elements are no smaller than <code>min</code> and no larger than
+     * <code>max</code>. If <code>maxLength</code> is smaller than 1, an array
+     * of length 1 will be returned.
+     * 
+     * @param maxLength
+     *            the maximum possible length the generated array can have
+     * @param min
+     *            lower bound of the elements (inclusive)
+     * @param max
+     *            higher bound of the elements (inclusive)
+     * @return
+     */
+    public static int[] randomLengthIntArr(int maxLength, int min, int max) {
+        if (maxLength <= 1) {
+            return randomIntArr(1, min, max);
+        }
+        return randomIntArr(randomInt(1, maxLength), min, max);
+    }
+
 }
