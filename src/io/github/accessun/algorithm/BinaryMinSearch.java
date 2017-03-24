@@ -21,6 +21,7 @@ public class BinaryMinSearch {
     public int locate(int[] arr) {
         if (arr == null || arr.length == 0)
             throw new IllegalArgumentException("Array should not be null or empty");
+        if (arr.length == 1) return 0;
 
         int lo = 0, hi = arr.length - 1;
         int mid;
