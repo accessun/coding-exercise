@@ -1,9 +1,16 @@
+# compilation and package files
 *.class
-
-# Package Files
 *.jar
+*.war
+*.ear
 
-# Eclipse Files
+# eclipse files
 .classpath
 .project
 .settings/
+
+# IntelliJ IDEA files
+*.iml
+
+# maven builds
+target/
