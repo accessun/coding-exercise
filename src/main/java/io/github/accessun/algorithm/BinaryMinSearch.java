@@ -1,7 +1,8 @@
 package io.github.accessun.algorithm;
 
-import org.junit.Assert;
-import org.junit.Test;
+
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 public class BinaryMinSearch {
 
@@ -56,11 +57,11 @@ public class BinaryMinSearch {
         int[] arr5 = { 1, 1, 1, 0, 1, 1, 1 }; // 3
         int[] arr6 = { 5, 5, 5, 5, 5 }; // 0
 
-        Assert.assertEquals(2, locate(arr1));
-        Assert.assertEquals(0, locate(arr2));
-        Assert.assertEquals(4, locate(arr3));
-        Assert.assertEquals(5, locate(arr4));
-        Assert.assertEquals(3, locate(arr5));
-        Assert.assertEquals(0, locate(arr6));
+        Assertions.assertEquals(2, locate(arr1));
+        Assertions.assertEquals(0, locate(arr2));
+        Assertions.assertEquals(4, locate(arr3));
+        Assertions.assertEquals(5, locate(arr4));
+        Assertions.assertEquals(3, locate(arr5));
+        Assertions.assertEquals(0, locate(arr6));
     }
 }
