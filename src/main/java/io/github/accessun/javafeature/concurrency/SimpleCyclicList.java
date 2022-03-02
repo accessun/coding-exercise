@@ -1,4 +1,4 @@
-package io.github.accessun.concurrency;
+package io.github.accessun.javafeature.concurrency;
 
 import java.util.ArrayList;
 import java.util.List;

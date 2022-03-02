@@ -1,8 +1,8 @@
-package io.github.accessun.algorithm;
+package io.github.accessun.algorithm.sort;
 
 import io.github.accessun.util.DSAUtils;
 
-public class SelectionSort implements SortOperation {
+public class SelectionSort implements IntSort {
 
     public void sort(int[] a) {
         if (a == null || a.length == 1)

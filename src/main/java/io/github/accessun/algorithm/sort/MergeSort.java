@@ -1,6 +1,6 @@
-package io.github.accessun.algorithm;
+package io.github.accessun.algorithm.sort;
 
-public class MergeSort implements SortOperation {
+public class MergeSort implements IntSort {
 
         /*
          * 1. allocate space for an auxiliary array

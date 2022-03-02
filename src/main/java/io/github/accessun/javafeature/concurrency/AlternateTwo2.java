@@ -1,4 +1,4 @@
-package io.github.accessun.concurrency;
+package io.github.accessun.javafeature.concurrency;
 
 public class AlternateTwo2 {
     private static class AlterPrint implements Runnable {

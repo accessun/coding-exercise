@@ -1,4 +1,4 @@
-package io.github.accessun.algorithm;
+package io.github.accessun.algorithm.string;
 
 /**
  * Problem: 4

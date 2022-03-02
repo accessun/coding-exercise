@@ -1,4 +1,4 @@
-package io.github.accessun.algorithm;
+package io.github.accessun.algorithm.binarytree;
 
 import io.github.accessun.datastructure.BinaryTreeNode;
 import io.github.accessun.datastructure.RebuildBinaryTree;

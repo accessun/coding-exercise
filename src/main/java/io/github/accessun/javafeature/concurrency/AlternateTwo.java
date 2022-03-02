@@ -1,4 +1,4 @@
-package io.github.accessun.concurrency;
+package io.github.accessun.javafeature.concurrency;
 
 /*
  * Two threads print true and false alternately.
